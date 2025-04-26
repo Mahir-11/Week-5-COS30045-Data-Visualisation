@@ -1,0 +1,154 @@
+/* Base styles */
+:root {
+    --primary-color: #4CAF50;
+    --primary-dark: #388E3C;
+    --light-bg: #f9f9f9;
+    --dark-text: #333;
+    --light-text: #f5f5f5;
+    --chart-bg: #ffffff;
+    --border-color: #e0e0e0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-text);
+    background-color: var(--light-bg);
+}
+
+/* Header styles */
+header {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 30px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+/* Main content */
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.intro {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: var(--chart-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.intro h2 {
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+}
+
+/* Chart grid */
+.chart-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* Chart containers */
+.chart-container {
+    background-color: var(--chart-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.chart-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container h3 {
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.chart-container p {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Chart areas */
+.chart {
+    width: 100%;
+    height: 300px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+/* Tooltips */
+.tooltip {
+    position: absolute;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 4px;
+    pointer-events: none;
+    font-size: 12px;
+    z-index: 100;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    margin-top: 30px;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    .chart-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+    .chart-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .chart {
+        height: 350px;
+    }
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    header h2 {
+        font-size: 1.2rem;
+    }
+    
+    .chart {
+        height: 300px;
+    }
+}

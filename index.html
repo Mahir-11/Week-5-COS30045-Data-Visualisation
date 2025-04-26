@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Energy Consumption Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Load D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>D3 Charts Dashboard</h1>
+        <h2>TV power consumption</h2>
+    </header>
+    
+    <main>
+        <section class="intro">
+            <h2>Understanding TV Energy Efficiency</h2>
+            <p>
+                This dashboard presents visualizations of TV energy consumption data across different 
+                dimensions. We explore relationships between energy consumption and star ratings, 
+                compare energy use across different screen technologies, and examine historical 
+                electricity price trends that impact the cost of running televisions.
+            </p>
+        </section>
+        
+        <div class="chart-grid">
+            <!-- Scatter Plot -->
+            <div class="chart-container">
+                <h3>Energy Consumption vs. Star Rating</h3>
+                <p>This scatter plot shows the relationship between the energy efficiency rating (stars) and actual power consumption of different TV models.</p>
+                <div id="scatter-plot" class="chart"></div>
+            </div>
+            
+            <!-- Donut Chart -->
+            <div class="chart-container">
+                <h3>Screen Technology Distribution</h3>
+                <p>This donut chart shows the proportion of different screen technologies in the TV market.</p>
+                <div id="donut-chart" class="chart"></div>
+            </div>
+            
+            <!-- Bar Chart -->
+            <div class="chart-container">
+                <h3>Energy Consumption by Screen Technology (55" TVs)</h3>
+                <p>This bar chart compares the average energy consumption of 55-inch TVs across different screen technologies.</p>
+                <div id="bar-chart" class="chart"></div>
+            </div>
+            
+            <!-- Line Chart -->
+            <div class="chart-container">
+                <h3>Electricity Price Trends (1998-2024)</h3>
+                <p>This line chart shows the historical trend of electricity prices which impacts the cost of operating a TV.</p>
+                <div id="line-chart" class="chart"></div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Data Visualization Exercise 5 | COS30045 Data Visualization</p>
+    </footer>
+    
+    <!-- Load chart scripts -->
+    <script src="js/scatter-plot.js"></script>
+    <script src="js/donut-chart.js"></script>
+    <script src="js/bar-chart.js"></script>
+    <script src="js/line-chart.js"></script>
+</body>
+</html>
